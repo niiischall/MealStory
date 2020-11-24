@@ -11,3 +11,10 @@
 <p>Favorite the dishes you like and later remove them if needed.</p>
 <p>More to come...</p>
 
+<hr/>
+
+<h3>Directions to Use</h3>
+<ul>
+  <li>Currently this application has an android version only.</li>
+  <li>You can download the APK file directly by following the google drive link.</li>
+</ul>
