@@ -19,10 +19,3 @@
   <li>You can download the APK file directly by following the google drive link.</li>
 </ul>
 
-<a href="https://drive.google.com/uc?export=view&id=1U7Uo3eJqfDiyqGg05BfKruH_jmhPdDPa">
-   <img 
-        src="https://drive.google.com/uc?export=view&id=1U7Uo3eJqfDiyqGg05BfKruH_jmhPdDPa" 
-        style="width: 100px; height: 100px" 
-        title="Click to enlarge picture" 
-    />
-</a>
