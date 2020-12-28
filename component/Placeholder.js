@@ -18,18 +18,11 @@ const Placeholder = (props) => {
         <Text style = {styles.PlaceholderSubtitleText}>
             {props.subtitle}
         </Text>
-        <Image 
-            source = {
-                require('../assets/undraw-treasure.png')
-            }
-            style  = {styles.Image}
-        />
     </View>
 )}
 
 const styles = StyleSheet.create({
     PlaceholderContainer: {
-        flex: 1,
         justifyContent:'center',
         alignItems: 'center'
     },
@@ -37,17 +30,15 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         textAlign: 'center',
         color: Colors.colorToggleButton,
-        fontSize: 26
+        fontSize: 26,
+        fontFamily: 'OpenSans-Regular'
     },
     PlaceholderSubtitleText: {
         marginBottom: 10,
         textAlign: 'center',
         color: Colors.colorToggleButton,
-        fontSize: 15
-    },
-    Image: {
-        width: 150,
-        height: 150
+        fontSize: 15,
+        fontFamily: 'Roboto-Bold'
     }
 })
 

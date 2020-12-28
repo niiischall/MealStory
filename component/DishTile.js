@@ -81,7 +81,8 @@ const styles = StyleSheet.create({
         paddingVertical: 10
     },
     TitleText: {
-        fontSize: 14,
+        fontSize: 16,
+        fontFamily: 'Roboto-Bold',
         textAlign: 'center',
         color: Colors.colorWhite
     },
@@ -93,6 +94,7 @@ const styles = StyleSheet.create({
     },
     SubTitleText: {
         fontSize: 12,
+        fontFamily: 'Roboto-Bold',
         textTransform: 'uppercase',
         color: Colors.colorHeadingText
     }

@@ -58,7 +58,7 @@ const FiltersScreen = (props) => {
                 <Switch
                     value = {isGlutenFree}
                     trackColor = {{
-                        false: Colors.colorWhite,
+                        false: Colors.colorBackgroundContent,
                         true: Colors.colorYellow
                     }}
                     thumbColor = { 
@@ -78,7 +78,7 @@ const FiltersScreen = (props) => {
                 <Switch
                     value = {isLactoseFree}
                     trackColor = {{
-                        false: Colors.colorWhite,
+                        false: Colors.colorBackgroundContent,
                         true: Colors.colorYellow
                     }}
                     thumbColor = {
@@ -98,7 +98,7 @@ const FiltersScreen = (props) => {
                 <Switch
                     value = {isVegan}
                     trackColor = {{
-                        false: Colors.colorWhite,
+                        false: Colors.colorBackgroundContent,
                         true: Colors.colorYellow
                     }}
                     thumbColor = {
@@ -118,7 +118,7 @@ const FiltersScreen = (props) => {
                 <Switch
                     value = {isVegetarian}
                     trackColor = {{
-                        false: Colors.colorWhite,
+                        false: Colors.colorBackgroundContent,
                         true: Colors.colorYellow
                     }}
                     thumbColor = {
@@ -131,6 +131,14 @@ const FiltersScreen = (props) => {
                     } 
                 />
             </View>
+        </View>
+        <View style = {styles.InstructContainer}>
+          <Text style = {styles.InstructText}>Press " <Ionicons 
+                name="md-cloud-upload" 
+                size={22} 
+                color={Colors.colorWhite}
+            /> " to confirm changes.
+          </Text>
         </View>
         <View style = {styles.Footer}>
             <Text style = {styles.FooterText}>
@@ -187,9 +195,9 @@ const styles = StyleSheet.create({
     FiltersScreen: {
         flex: 1,
         paddingVertical: 20,
-        justifyContent:'space-between',
+        justifyContent:'space-around',
         alignItems: 'center',
-        backgroundColor: Colors.colorBackgroundContent
+        backgroundColor: Colors.colorWhite
     },
     Gradient: {
         flex: 1
@@ -200,7 +208,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         marginVertical: 20,
         borderRadius: 20,
-        backgroundColor: Colors.colorItemSelectedSidebar,
         shadowColor: Colors.colorShadaow,
         shadowOffset: {width: 0, height: 3},
         shadowRadius: 4.65,
@@ -209,11 +216,13 @@ const styles = StyleSheet.create({
     },
     FilterText: {
         fontSize: 18,
+        fontFamily: 'Roboto-Bold',
         color: Colors.colorWhite,
         textTransform: 'uppercase'
     },
     FooterText: {
         fontSize: 16,
+        fontFamily: 'Roboto-Bold',
         color: Colors.colorItemSelectedSidebar
     },
     SwitchContainer: {
@@ -229,7 +238,23 @@ const styles = StyleSheet.create({
     },
     SwitchText: {
         fontSize: 18,
+        fontFamily: 'Roboto-Bold',
         color: Colors.colorToggleButton
+    },
+    InstructContainer: {
+        marginBottom: 'auto',
+        alignItems: 'center',
+        backgroundColor: Colors.colorItemSelectedSidebar,
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        marginVertical: 20,
+        borderRadius: 20,
+    },
+    InstructText: {
+        fontSize: 18,
+        fontFamily: 'Roboto-Bold',
+        color: Colors.colorWhite,
+        alignItems: 'center'
     }
 })
 

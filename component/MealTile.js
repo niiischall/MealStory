@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
     MealTitle: {
         color: Colors.colorWhite,
         fontSize: 14,
+        fontFamily: 'Roboto-Bold'
     }
 });
 

@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
     },
     ButtonText: {
         fontSize: 16,
+        fontFamily: 'Roboto-Bold',
         color: Colors.colorItemSelectedSidebar
     }
 });

@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
     LogoText: {
         marginLeft: 5,
         color: Colors.colorBackgroundSelectedSidebar,
-        fontSize: 20
+        fontSize: 20,
+        fontFamily: 'Pacifico'
     }
 })
 

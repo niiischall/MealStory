@@ -71,23 +71,6 @@ const Drawer = (props) => {
                         >Filters</Text>
                     </View>
                 </View>
-                <View style = {styles.DrawerListItem}>
-                    <View style = {{
-                        ...styles.DrawerItem,
-                        justifyContent: "center",
-                        paddingBottom: 20
-                    }}>
-                        <Image 
-                            source = {
-                                require('../assets/user.jpg')
-                            }
-                            style = {styles.User}
-                        />
-                        <Text 
-                            style = {styles.DrawerItemText}
-                        >harry truman</Text>
-                    </View>
-                </View>
             </ScrollView>
         </View>
     </SafeAreaView>
@@ -127,6 +110,7 @@ const styles = StyleSheet.create({
     },
     DrawerItemText: {
         fontSize: 18,
+        fontFamily: 'Roboto-Bold',
         color: Colors.colorWhite,
         textTransform: 'capitalize'
     },

@@ -41,6 +41,7 @@ const MealsScreen = (props) => {
                 renderItem   = {MealItem}
                 keyExtractor = {(item) => item.id}
                 style        = {{width: '100%'}}
+                showsVerticalScrollIndicator = {false}
             />
         </View>
     </SafeAreaView>
@@ -74,7 +75,7 @@ const styles = StyleSheet.create({
         padding: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: Colors.colorBackgroundContent
+        backgroundColor: Colors.colorWhite
     }
 })
 

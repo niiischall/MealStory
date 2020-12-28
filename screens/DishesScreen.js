@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from 'react';
 import {
     View,
+    Image,
     FlatList,
     SafeAreaView,
     StyleSheet
@@ -52,15 +53,22 @@ const DishesScreen = (props) => {
                     renderItem   = {renderItems}
                     keyExtractor = {(item) => item.id}
                     style        = {{width: '100%'}}
+                    showsVerticalScrollIndicator = {false}
                 />
             </View>
         )
     }else{
         content = (
-            <Placeholder 
-                title = "No dishes available." 
-                subtitle = "Please check your filters."
-            />
+            <View style = {styles.DishesContainer}>
+                <Placeholder 
+                    title = "No dishes available." 
+                    subtitle = "Please check your filters."
+                />
+                <Image 
+                    source = {require('../assets/blank-data.png')}
+                    style = {styles.Image}
+                />
+            </View>
         )
     }
 
@@ -89,7 +97,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         paddingHorizontal: 30,
-        backgroundColor: Colors.colorBackgroundContent
+        backgroundColor: Colors.colorWhite
+    },
+    Image: {
+        width: 200,
+        height: 200
     }
 });
 

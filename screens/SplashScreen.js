@@ -41,12 +41,14 @@ const styles = StyleSheet.create({
     },
     Headline: {
         color: Colors.colorBackgroundSelectedSidebar,
-        fontSize:  40
+        fontSize: 40,
+        fontFamily: 'Pacifico',
     },
     Subtext:{
         marginVertical: 10,
         color: Colors.colorBackgroundSelectedSidebar,
         fontSize: 20,
+        fontFamily: 'OpenSans-Bold',
         letterSpacing: 1
     }
 })

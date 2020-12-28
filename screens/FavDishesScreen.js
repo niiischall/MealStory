@@ -1,6 +1,7 @@
 import React from 'react';
 import {
     View,
+    Image,
     FlatList,
     SafeAreaView,
     StyleSheet
@@ -46,12 +47,19 @@ const FavDishesScreen = (props) => {
                     renderItem   = {renderItems}
                     keyExtractor = {(item) => item.id}
                     style        = {{width: '100%'}}
+                    showsVerticalScrollIndicator = {false}
                 />
                 :
-                <Placeholder 
-                    title = "No dishes available."
-                    subtitle = "Have a look at our menu to see more options." 
-                />
+                <View style = {{alignItems: 'center'}}>
+                    <Placeholder 
+                        title = "No dishes available."
+                        subtitle = "Have a look at our menu to see more options." 
+                    />
+                    <Image 
+                        source = {require('../assets/no-data.png')}
+                        style = {styles.Image}
+                    />
+                </View>
             }
         </View>
     </SafeAreaView>
@@ -86,7 +94,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         paddingHorizontal: 30,
-        backgroundColor: Colors.colorBackgroundContent
+        backgroundColor: Colors.colorWhite
+    },
+    Image: {
+        width: 200,
+        height: 200
     }
 });
 

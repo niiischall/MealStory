@@ -39,10 +39,12 @@ const defaultNavigationOptions = {
         shadowOffset: {width: 0, height: 3},
         shadowRadius: 4.65,
         shadowOpacity: 0.29,
-        elevation: 7    
+        elevation: 7  
     },
+    headerTintColor: Colors.colorWhite,
     headerTitleStyle: {
         fontSize: 20,
+        fontFamily: 'Roboto-Bold',
         color: Colors.colorWhite
     }
 }

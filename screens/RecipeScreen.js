@@ -37,41 +37,20 @@ const RecipeScreen = (props) => {
 
     const isFavourite = favDishes.some(dish => dish.id === dishId);
 
-
-    useEffect(() => {
-        handleDish();
-    }, [handleDish]);
-
-    useEffect(() => {
-        handleStars();
-    }, [handleStars]);
-
-    useEffect(() => {
-        props.navigation.setParams({
-            isFavourite: isFavourite
-        })
-    }, [isFavourite])
-
-    useEffect(() => {
-        props.navigation.setParams({
-            setFavourite: setFavourite
-        })
-    }, [setFavourite])
-
-    const handleDish = useCallback(() => {
+    const handleDish = () => {
         const fetchedDish = Dishes.find((dish) => {
             return dish.id === dishId;
         });
 
         setDish(fetchedDish);
         setTheme(propTheme);
-    });
+    };
 
-    const setFavourite = useCallback(() => {
-        dispatch(actions.setFavorite(dishId));
-    }) 
+    useEffect(() => {
+        handleDish();
+    }, [])
 
-    const handleStars = useCallback(() => {
+    const handleStars = () => {
         if(Dish){
             const complexity = Dish.complexity;
             if(complexity === 'simple'){
@@ -86,11 +65,34 @@ const RecipeScreen = (props) => {
                 setStars([' ']);
             }
         }
-    });
+    };
+
+    useEffect(() => {
+        handleStars();
+    }, [Dish]);
+
+    useEffect(() => {
+        props.navigation.setParams({
+            isFavourite: isFavourite
+        })
+    }, [isFavourite])
+
+    useEffect(() => {
+        props.navigation.setParams({
+            setFavourite: setFavourite
+        })
+    }, [setFavourite])
+
+    const setFavourite = useCallback(() => {
+        dispatch(actions.setFavorite(dishId));
+    }) 
 
     return(
     <SafeAreaView style = {{flex: 1}}>
-        <ScrollView>
+        <ScrollView 
+            style = {{backgroundColor: Colors.colorWhite}}
+            showsVerticalScrollIndicator = {false}
+        >
             {
                 Dish && 
                 <Image 
@@ -303,7 +305,8 @@ const styles = StyleSheet.create({
         padding: 5,
     },
     Headline: {
-        fontSize: 18
+        fontSize: 18,
+        fontFamily: 'OpenSans-Bold'
     },
     RecipeSubHeadline: {
         flexDirection: 'row',
@@ -316,6 +319,7 @@ const styles = StyleSheet.create({
     }, 
     SubText: {
         fontSize: 14,
+        fontFamily: 'Roboto-Bold',
         color: Colors.colorHeadingText,
         textTransform: 'capitalize'
     },
@@ -326,6 +330,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 16,
+        fontFamily: 'OpenSans-Bold',
         textTransform: 'uppercase',
         marginLeft: 10
     }, 
@@ -336,7 +341,8 @@ const styles = StyleSheet.create({
     },
     ing: {
         fontSize: 16,
-        color: Colors.colorHeadingText 
+        fontFamily: 'Roboto-Regular',
+        color: Colors.colorBlack
     },
     StepsContainer: {
         width: '100%',
@@ -358,7 +364,8 @@ const styles = StyleSheet.create({
     stepText: {
         flexWrap: 'wrap',
         fontSize: 16,
-        color: Colors.colorHeadingText 
+        fontFamily: 'Roboto-Regular',
+        color: Colors.colorBlack
     }
 })
 
