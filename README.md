@@ -1,7 +1,9 @@
 <h1>MealStory</h1>
-<h3>A React Native Application.</h3>
+<h3>A food-catalogue application built using React Native.</h3>
 
 <hr/>
+
+![output sample](https://github.com/nischalNikit/MealStory/blob/main/assets/MealStory-gif.gif)
 
 <h3>Features</h3>
 
